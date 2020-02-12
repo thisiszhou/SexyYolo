@@ -1,0 +1,40 @@
+MODEL:
+  IMAGE_SIZE: (416,) # training image size
+  CATEGORY_NUM: (80, 0) # coco categoty
+  PRIOR_BOXES_FILE: 'data/coco_boxes.txt' # prior box file
+  MODEL_WEIGHTS: "data/model_weights_train/yolov3-100000" # model weights for eval and infer
+TRAIN:
+  PRE_TRAIN_MODEL: "" # pre-training model weights 
+  LOAD_TRAIN_MODEL: "data/model_weights/yolov3" # model weights to go on training 
+  DETECTION_TRAIN:
+    DATESET:
+      TRAIN_PHOTO_FOLDER: "/home/zhxy/dataset/coco/coco2017/train2017" # detection training photo folder
+      TRAIN_ANNOTATION_FILE: "/home/zhxy/dataset/coco/coco2017/annotations/instances_train2017.json"
+    TRAIN_PARA:
+      TRAIN_STEP: 100000
+      MODEL_SAVE_FILE: "data/model_weights/yolov3"
+      SHOW_LOSS_STEP: 50
+      WEIGHTS_SAVE_STEP: 2000
+      START_LEANING_RATE: 0.00001
+      MIN_LEANING_RATE: 0.000001
+      LR_DECAY_STEP: 50
+      LR_DECAY: 0.998
+      CLASSES_WEIGHTS: 1
+      BOXES_WEIGHTS: 5
+      OBJECT_CONF_WEIGHTS: 1
+      NOOC_WEIGHTS: 0.1
+      NOOC_IGNORE_THRESH: 0.7
+      BATCH_SIZE: 8
+  CLASSIFY_TRAIN:
+    JOINT_TRAIN_ON: False
+EVAL:
+  COCO_EVAL:
+    DATESET:
+      EVAL_PHOTO_FOLDER: "/home/zhxy/dataset/coco/coco2017/val2017" # evaluation dataset
+      EVAL_ANNOTATION_FILE: "/home/zhxy/dataset/coco/coco2017/annotations/instances_val2017.json"
+    RESULT:
+      DETEC_RESULT_JSON: "data/eval.json"
+INFER:
+  ACTIVATE_THRESH: 0.7
+  SHOW_SECOND_CATE: False
+  CATEGORY_NAME_FILE: "data/categories_name.json"
