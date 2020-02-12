@@ -47,7 +47,7 @@ Common COCO weights is converted from author of Yolov3(pjreddie.com), Sexy&COCO 
 Name|inference time(s/im)|category|AP@IoU=0.50:0.95|AP@IoU=0.50|AP@IoU=0.75|download   
 ------:|:------:|:------:|:------:|:------:|:------:|:------:
 COCO|0.046|80|0.357|0.616|0.376|[model]()  
-SexyCOCO|0.047|83|0.309|0.551|0.308|[model]() 
+SexyCOCO|0.047|83|0.309|0.551|0.308|[model](https://drive.google.com/open?id=1ZxgDB-oHJEKf3Oq_uc0ePDffo_2rqxRI) 
 
 ****************
 
@@ -97,7 +97,7 @@ NSFW dataset: https://github.com/alex000kim/nsfw_data_scraper
 
 ## Evaluate model
 
-CocoApi is needed, please install cocoapi first: https://github.com/cocodataset/cocoapi
+CocoApi is needed, please install cocoapi first: https://github.com/cocodataset/cocoapi  
 Run this to evaluate your model:
 ```bashrc
 $ python tools/eval_on_coco.py --config-file configs/Yolov3_Joint_CocoAndNsfw.yaml
