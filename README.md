@@ -105,4 +105,4 @@ $ python tools/eval_on_coco.py --config-file configs/Yolov3_Joint_CocoAndNsfw.ya
 ****************
 ## More Details
 
-- please see the blog [Description and discussion]()
+- please see the blog [Description and discussion](https://zhuanlan.zhihu.com/p/106586069)
