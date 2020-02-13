@@ -38,7 +38,7 @@ $ python tools/infer.py test_pic.jpg(or folder) --config-file configs/Yolov3_Joi
 ```
 ****************
 
-## Model weights (model weights is uploading, please wait)
+## Model weights
 
 Two model weights are provided: common COCO model and Sexy&COCO model.  
 Common COCO weights is converted from author of Yolov3(pjreddie.com), Sexy&COCO weights are trained on image size of 416 * 416, so mAP is less than the former but close to Yolov3 paper's 416 image size model mAP. 
@@ -46,8 +46,8 @@ Common COCO weights is converted from author of Yolov3(pjreddie.com), Sexy&COCO 
     
 Name|inference time(s/im)|category|AP@IoU=0.50:0.95|AP@IoU=0.50|AP@IoU=0.75|download   
 ------:|:------:|:------:|:------:|:------:|:------:|:------:
-COCO|0.046|80|0.357|0.616|0.376|[model]()  
-SexyCOCO|0.047|83|0.309|0.551|0.308|[model](https://drive.google.com/open?id=1ZxgDB-oHJEKf3Oq_uc0ePDffo_2rqxRI) 
+COCO|0.046|80|0.357|0.616|0.376|[model](https://drive.google.com/file/d/1dIMhOQG6QvJyzdkPGShdahUeM7XOiVja/view)  
+SexyCOCO|0.047|83|0.309|0.551|0.308|[model](https://drive.google.com/open?id=1ZxgDB-oHJEKf3Oq_uc0ePDffo_2rqxRI)
 
 ****************
 
